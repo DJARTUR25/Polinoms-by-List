@@ -150,6 +150,17 @@ public:
 };
 
 
+struct TMonom {
+	double Coeff;				//the monome coefficient
+	int Index;					//index (powers)
+public:
+	TMonom(int a, int b) {
+		Coeff = a;
+		Index = b;
+	}
+};
+
+
 template <class T>
 class THeadList : public TList <T> {
 protected:
@@ -157,6 +168,7 @@ protected:
 public:
 	THeadList() {				// designer
 		pHead = new TNode<T>;
+		pHead = nullptr;
 		pHead->pNext = pHead;
 		pStop = pFirst = pPr = pCurr = pLast = pHead;
 		len = 0;
@@ -166,15 +178,15 @@ public:
 	THeadList(const THeadList<T>& HL) {		//designer by copy
 		pHead = nullptr;
 		TNode<T>* tmp = HL.pFirst;
-		TNode<T>* i;
+		TNode<T>* tmp2;
 		while (tmp != nullptr) {
-			i = new TNode<T>;
-			i->val = tmp->val;
+			tmp2 = new TNode<T>;
+			tmp2->val = tmp->val;
 			if (HL.pHead == HL.pHead)
-				pFirst = pLast = pStop = pHead = i;
+				pFirst = pLast = pStop = pHead = tmp2;
 			else {
-				pLast->pNext = i;
-				pLast = i;
+				pLast->pNext = tmp2;
+				pLast = tmp2;
 				pHead->pNext = pFirst;
 			}
 			tmp = tmp->pNext;
@@ -187,5 +199,33 @@ public:
 	~THeadList() {
 		TList<T>::DelList();
 		delete pHead;
+	}
+
+	void InsFirst(T elem) {
+		TList<T>::InsFirst(elem);
+		pHead->pNext = pFirst;
+	}
+
+	void DelFirst(T elem) {
+		TList<T>::DelFirst(elem);
+		pHead->pNext = pFirst;
+	}
+
+	void InsLast(T elem) {
+		TList<T>::InsLast(elem);
+		pLast->pNext = pHead;
+	}
+
+	void DelLast(T elem) {
+		TList<T>::DelLast(elem);
+		pLast->pNext = pHead;
+	}
+
+	void InsCurr(T elem) {
+		TList<T>::InsCurr(elem);
+	}
+
+	void DelCurr(T elem) {
+		TList<T>::DelCurr(elem);
 	}
 };
