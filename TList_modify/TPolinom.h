@@ -14,15 +14,49 @@ public:
 	}
 
 	TPolinom(TPolinom& TP) {
-		TMonom m(0, -1);
-		pHead->val = m;
+		TMonom tmp(0, -1);
+		pHead->val = tmp;
 		for (TP.Reset(); !TP.IsEnd(); TP.GoNext()) {
 			TMonom monom = TP.GetCurr();
 			InsLast(monom);
 		}
 	}
 
-	TPolinom& operator+ (TPolinom& TP);
+	TMonom GetMonom() {
+		TMonom monom = GetCurr();
+		return monom;
+	}
+
+	TPolinom& operator+ (TPolinom& TP) {
+		TMonom pm, qm, rm;
+		this->Reset();
+		while (1) {
+			pm = GetMonom();
+			qm = TP.GetMonom();
+			if (pm.Index > qm.Index) {
+				InsCurr(qm);
+				TP.GoNext();
+			}
+			else if (pm.Index > qm.Index) {
+				GoNext();
+				TP.GoNext();
+			}
+			else {
+				if (pm.Index == -1)
+					break;
+				pm.Coeff += qm.Coeff;
+				if (pm.Index != 0) {
+					GoNext();
+					TP.GoNext();
+				}
+				else {
+					DelCurr();
+					TP.GoNext();
+				}
+			}
+		}
+		return *this;
+	}
 
 	TPolinom& operator= (TPolinom& TP) {
 		DelList();
@@ -45,8 +79,8 @@ public:
 
 	}
 
-	friend ostream& operator<< (ostream& os, TPolinom& TP) {
+	/*friend ostream& operator<< (ostream& os, TPolinom& TP) {
 
-	}
+	}*/
 };
 

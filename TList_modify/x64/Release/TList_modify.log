@@ -1,0 +1,364 @@
+﻿  main.cpp
+E:\Программы\Polinoms-by-List\TList_modify\TList.h(190,3): error C3861: pStop: идентификатор не найден
+  (компиляция исходного файла "main.cpp")
+  E:\Программы\Polinoms-by-List\TList_modify\TList.h(190,3):
+  контекст создания экземпляра шаблона (сначала самый старый)
+  	E:\Программы\Polinoms-by-List\TList_modify\TList.h(251,2):
+  	выполняется компиляция ссылки на экземпляр класс шаблон функции "THeadList<T>"
+  
+E:\Программы\Polinoms-by-List\TList_modify\TList.h(191,3): error C3861: pFirst: идентификатор не найден
+  (компиляция исходного файла "main.cpp")
+  
+E:\Программы\Polinoms-by-List\TList_modify\TList.h(192,3): error C3861: pPr: идентификатор не найден
+  (компиляция исходного файла "main.cpp")
+  
+E:\Программы\Polinoms-by-List\TList_modify\TList.h(193,3): error C3861: pCurr: идентификатор не найден
+  (компиляция исходного файла "main.cpp")
+  
+E:\Программы\Polinoms-by-List\TList_modify\TList.h(194,3): error C3861: len: идентификатор не найден
+  (компиляция исходного файла "main.cpp")
+  
+E:\Программы\Polinoms-by-List\TList_modify\TList.h(195,3): error C3861: pos: идентификатор не найден
+  (компиляция исходного файла "main.cpp")
+  
+E:\Программы\Polinoms-by-List\TList_modify\TList.h(190,3): error C2065: pStop: необъявленный идентификатор
+  (компиляция исходного файла "main.cpp")
+  
+E:\Программы\Polinoms-by-List\TList_modify\TList.h(191,3): error C2065: pFirst: необъявленный идентификатор
+  (компиляция исходного файла "main.cpp")
+  
+E:\Программы\Polinoms-by-List\TList_modify\TList.h(192,3): error C2065: pPr: необъявленный идентификатор
+  (компиляция исходного файла "main.cpp")
+  
+E:\Программы\Polinoms-by-List\TList_modify\TList.h(193,3): error C2065: pCurr: необъявленный идентификатор
+  (компиляция исходного файла "main.cpp")
+  
+E:\Программы\Polinoms-by-List\TList_modify\TList.h(194,3): error C2065: len: необъявленный идентификатор
+  (компиляция исходного файла "main.cpp")
+  
+E:\Программы\Polinoms-by-List\TList_modify\TList.h(195,3): error C2065: pos: необъявленный идентификатор
+  (компиляция исходного файла "main.cpp")
+  
+E:\Программы\Polinoms-by-List\TList_modify\TList.h(206,5): error C3861: pFirst: идентификатор не найден
+  (компиляция исходного файла "main.cpp")
+  
+E:\Программы\Polinoms-by-List\TList_modify\TList.h(206,14): error C3861: pLast: идентификатор не найден
+  (компиляция исходного файла "main.cpp")
+  
+E:\Программы\Polinoms-by-List\TList_modify\TList.h(206,22): error C3861: pStop: идентификатор не найден
+  (компиляция исходного файла "main.cpp")
+  
+E:\Программы\Polinoms-by-List\TList_modify\TList.h(208,5): error C3861: pLast: идентификатор не найден
+  (компиляция исходного файла "main.cpp")
+  
+E:\Программы\Polinoms-by-List\TList_modify\TList.h(209,5): error C3861: pLast: идентификатор не найден
+  (компиляция исходного файла "main.cpp")
+  
+E:\Программы\Polinoms-by-List\TList_modify\TList.h(210,20): error C3861: pFirst: идентификатор не найден
+  (компиляция исходного файла "main.cpp")
+  
+E:\Программы\Polinoms-by-List\TList_modify\TList.h(214,3): error C3861: len: идентификатор не найден
+  (компиляция исходного файла "main.cpp")
+  
+E:\Программы\Polinoms-by-List\TList_modify\TList.h(215,3): error C3861: pos: идентификатор не найден
+  (компиляция исходного файла "main.cpp")
+  
+E:\Программы\Polinoms-by-List\TList_modify\TList.h(216,3): error C3861: pStop: идентификатор не найден
+  (компиляция исходного файла "main.cpp")
+  
+E:\Программы\Polinoms-by-List\TList_modify\TList.h(206,5): error C2065: pFirst: необъявленный идентификатор
+  (компиляция исходного файла "main.cpp")
+  
+E:\Программы\Polinoms-by-List\TList_modify\TList.h(206,14): error C2065: pLast: необъявленный идентификатор
+  (компиляция исходного файла "main.cpp")
+  
+E:\Программы\Polinoms-by-List\TList_modify\TList.h(206,22): error C2065: pStop: необъявленный идентификатор
+  (компиляция исходного файла "main.cpp")
+  
+E:\Программы\Polinoms-by-List\TList_modify\TList.h(208,5): error C2065: pLast: необъявленный идентификатор
+  (компиляция исходного файла "main.cpp")
+  
+E:\Программы\Polinoms-by-List\TList_modify\TList.h(209,5): error C2065: pLast: необъявленный идентификатор
+  (компиляция исходного файла "main.cpp")
+  
+E:\Программы\Polinoms-by-List\TList_modify\TList.h(210,20): error C2065: pFirst: необъявленный идентификатор
+  (компиляция исходного файла "main.cpp")
+  
+E:\Программы\Polinoms-by-List\TList_modify\TList.h(214,3): error C2065: len: необъявленный идентификатор
+  (компиляция исходного файла "main.cpp")
+  
+E:\Программы\Polinoms-by-List\TList_modify\TList.h(215,3): error C2065: pos: необъявленный идентификатор
+  (компиляция исходного файла "main.cpp")
+  
+E:\Программы\Polinoms-by-List\TList_modify\TList.h(216,3): error C2065: pStop: необъявленный идентификатор
+  (компиляция исходного файла "main.cpp")
+  
+E:\Программы\Polinoms-by-List\TList_modify\TList.h(226,18): error C3861: pFirst: идентификатор не найден
+  (компиляция исходного файла "main.cpp")
+  
+E:\Программы\Polinoms-by-List\TList_modify\TList.h(226,18): error C2065: pFirst: необъявленный идентификатор
+  (компиляция исходного файла "main.cpp")
+  
+E:\Программы\Polinoms-by-List\TList_modify\TList.h(231,18): error C3861: pFirst: идентификатор не найден
+  (компиляция исходного файла "main.cpp")
+  
+E:\Программы\Polinoms-by-List\TList_modify\TList.h(231,18): error C2065: pFirst: необъявленный идентификатор
+  (компиляция исходного файла "main.cpp")
+  
+E:\Программы\Polinoms-by-List\TList_modify\TList.h(236,3): error C3861: pLast: идентификатор не найден
+  (компиляция исходного файла "main.cpp")
+  
+E:\Программы\Polinoms-by-List\TList_modify\TList.h(236,3): error C2065: pLast: необъявленный идентификатор
+  (компиляция исходного файла "main.cpp")
+  
+E:\Программы\Polinoms-by-List\TList_modify\TList.h(241,3): error C3861: pLast: идентификатор не найден
+  (компиляция исходного файла "main.cpp")
+  
+E:\Программы\Polinoms-by-List\TList_modify\TList.h(241,3): error C2065: pLast: необъявленный идентификатор
+  (компиляция исходного файла "main.cpp")
+  
+E:\Программы\Polinoms-by-List\TList_modify\TPolinom.h(11,36): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
+  (компиляция исходного файла "main.cpp")
+  
+E:\Программы\Polinoms-by-List\TList_modify\main.cpp(6,13): warning C4326: возвращаемый тип "main" должен быть "int", а не "void"
+  TList.cpp
+E:\Программы\Polinoms-by-List\TList_modify\TList.h(190,3): error C3861: pStop: идентификатор не найден
+  (компиляция исходного файла "TList.cpp")
+  E:\Программы\Polinoms-by-List\TList_modify\TList.h(190,3):
+  контекст создания экземпляра шаблона (сначала самый старый)
+  	E:\Программы\Polinoms-by-List\TList_modify\TList.h(251,2):
+  	выполняется компиляция ссылки на экземпляр класс шаблон функции "THeadList<T>"
+  
+E:\Программы\Polinoms-by-List\TList_modify\TList.h(191,3): error C3861: pFirst: идентификатор не найден
+  (компиляция исходного файла "TList.cpp")
+  
+E:\Программы\Polinoms-by-List\TList_modify\TList.h(192,3): error C3861: pPr: идентификатор не найден
+  (компиляция исходного файла "TList.cpp")
+  
+E:\Программы\Polinoms-by-List\TList_modify\TList.h(193,3): error C3861: pCurr: идентификатор не найден
+  (компиляция исходного файла "TList.cpp")
+  
+E:\Программы\Polinoms-by-List\TList_modify\TList.h(194,3): error C3861: len: идентификатор не найден
+  (компиляция исходного файла "TList.cpp")
+  
+E:\Программы\Polinoms-by-List\TList_modify\TList.h(195,3): error C3861: pos: идентификатор не найден
+  (компиляция исходного файла "TList.cpp")
+  
+E:\Программы\Polinoms-by-List\TList_modify\TList.h(190,3): error C2065: pStop: необъявленный идентификатор
+  (компиляция исходного файла "TList.cpp")
+  
+E:\Программы\Polinoms-by-List\TList_modify\TList.h(191,3): error C2065: pFirst: необъявленный идентификатор
+  (компиляция исходного файла "TList.cpp")
+  
+E:\Программы\Polinoms-by-List\TList_modify\TList.h(192,3): error C2065: pPr: необъявленный идентификатор
+  (компиляция исходного файла "TList.cpp")
+  
+E:\Программы\Polinoms-by-List\TList_modify\TList.h(193,3): error C2065: pCurr: необъявленный идентификатор
+  (компиляция исходного файла "TList.cpp")
+  
+E:\Программы\Polinoms-by-List\TList_modify\TList.h(194,3): error C2065: len: необъявленный идентификатор
+  (компиляция исходного файла "TList.cpp")
+  
+E:\Программы\Polinoms-by-List\TList_modify\TList.h(195,3): error C2065: pos: необъявленный идентификатор
+  (компиляция исходного файла "TList.cpp")
+  
+E:\Программы\Polinoms-by-List\TList_modify\TList.h(206,5): error C3861: pFirst: идентификатор не найден
+  (компиляция исходного файла "TList.cpp")
+  
+E:\Программы\Polinoms-by-List\TList_modify\TList.h(206,14): error C3861: pLast: идентификатор не найден
+  (компиляция исходного файла "TList.cpp")
+  
+E:\Программы\Polinoms-by-List\TList_modify\TList.h(206,22): error C3861: pStop: идентификатор не найден
+  (компиляция исходного файла "TList.cpp")
+  
+E:\Программы\Polinoms-by-List\TList_modify\TList.h(208,5): error C3861: pLast: идентификатор не найден
+  (компиляция исходного файла "TList.cpp")
+  
+E:\Программы\Polinoms-by-List\TList_modify\TList.h(209,5): error C3861: pLast: идентификатор не найден
+  (компиляция исходного файла "TList.cpp")
+  
+E:\Программы\Polinoms-by-List\TList_modify\TList.h(210,20): error C3861: pFirst: идентификатор не найден
+  (компиляция исходного файла "TList.cpp")
+  
+E:\Программы\Polinoms-by-List\TList_modify\TList.h(214,3): error C3861: len: идентификатор не найден
+  (компиляция исходного файла "TList.cpp")
+  
+E:\Программы\Polinoms-by-List\TList_modify\TList.h(215,3): error C3861: pos: идентификатор не найден
+  (компиляция исходного файла "TList.cpp")
+  
+E:\Программы\Polinoms-by-List\TList_modify\TList.h(216,3): error C3861: pStop: идентификатор не найден
+  (компиляция исходного файла "TList.cpp")
+  
+E:\Программы\Polinoms-by-List\TList_modify\TList.h(206,5): error C2065: pFirst: необъявленный идентификатор
+  (компиляция исходного файла "TList.cpp")
+  
+E:\Программы\Polinoms-by-List\TList_modify\TList.h(206,14): error C2065: pLast: необъявленный идентификатор
+  (компиляция исходного файла "TList.cpp")
+  
+E:\Программы\Polinoms-by-List\TList_modify\TList.h(206,22): error C2065: pStop: необъявленный идентификатор
+  (компиляция исходного файла "TList.cpp")
+  
+E:\Программы\Polinoms-by-List\TList_modify\TList.h(208,5): error C2065: pLast: необъявленный идентификатор
+  (компиляция исходного файла "TList.cpp")
+  
+E:\Программы\Polinoms-by-List\TList_modify\TList.h(209,5): error C2065: pLast: необъявленный идентификатор
+  (компиляция исходного файла "TList.cpp")
+  
+E:\Программы\Polinoms-by-List\TList_modify\TList.h(210,20): error C2065: pFirst: необъявленный идентификатор
+  (компиляция исходного файла "TList.cpp")
+  
+E:\Программы\Polinoms-by-List\TList_modify\TList.h(214,3): error C2065: len: необъявленный идентификатор
+  (компиляция исходного файла "TList.cpp")
+  
+E:\Программы\Polinoms-by-List\TList_modify\TList.h(215,3): error C2065: pos: необъявленный идентификатор
+  (компиляция исходного файла "TList.cpp")
+  
+E:\Программы\Polinoms-by-List\TList_modify\TList.h(216,3): error C2065: pStop: необъявленный идентификатор
+  (компиляция исходного файла "TList.cpp")
+  
+E:\Программы\Polinoms-by-List\TList_modify\TList.h(226,18): error C3861: pFirst: идентификатор не найден
+  (компиляция исходного файла "TList.cpp")
+  
+E:\Программы\Polinoms-by-List\TList_modify\TList.h(226,18): error C2065: pFirst: необъявленный идентификатор
+  (компиляция исходного файла "TList.cpp")
+  
+E:\Программы\Polinoms-by-List\TList_modify\TList.h(231,18): error C3861: pFirst: идентификатор не найден
+  (компиляция исходного файла "TList.cpp")
+  
+E:\Программы\Polinoms-by-List\TList_modify\TList.h(231,18): error C2065: pFirst: необъявленный идентификатор
+  (компиляция исходного файла "TList.cpp")
+  
+E:\Программы\Polinoms-by-List\TList_modify\TList.h(236,3): error C3861: pLast: идентификатор не найден
+  (компиляция исходного файла "TList.cpp")
+  
+E:\Программы\Polinoms-by-List\TList_modify\TList.h(236,3): error C2065: pLast: необъявленный идентификатор
+  (компиляция исходного файла "TList.cpp")
+  
+E:\Программы\Polinoms-by-List\TList_modify\TList.h(241,3): error C3861: pLast: идентификатор не найден
+  (компиляция исходного файла "TList.cpp")
+  
+E:\Программы\Polinoms-by-List\TList_modify\TList.h(241,3): error C2065: pLast: необъявленный идентификатор
+  (компиляция исходного файла "TList.cpp")
+  
+  TPolinom.cpp
+E:\Программы\Polinoms-by-List\TList_modify\TList.h(190,3): error C3861: pStop: идентификатор не найден
+  (компиляция исходного файла "TPolinom.cpp")
+  E:\Программы\Polinoms-by-List\TList_modify\TList.h(190,3):
+  контекст создания экземпляра шаблона (сначала самый старый)
+  	E:\Программы\Polinoms-by-List\TList_modify\TList.h(251,2):
+  	выполняется компиляция ссылки на экземпляр класс шаблон функции "THeadList<T>"
+  
+E:\Программы\Polinoms-by-List\TList_modify\TList.h(191,3): error C3861: pFirst: идентификатор не найден
+  (компиляция исходного файла "TPolinom.cpp")
+  
+E:\Программы\Polinoms-by-List\TList_modify\TList.h(192,3): error C3861: pPr: идентификатор не найден
+  (компиляция исходного файла "TPolinom.cpp")
+  
+E:\Программы\Polinoms-by-List\TList_modify\TList.h(193,3): error C3861: pCurr: идентификатор не найден
+  (компиляция исходного файла "TPolinom.cpp")
+  
+E:\Программы\Polinoms-by-List\TList_modify\TList.h(194,3): error C3861: len: идентификатор не найден
+  (компиляция исходного файла "TPolinom.cpp")
+  
+E:\Программы\Polinoms-by-List\TList_modify\TList.h(195,3): error C3861: pos: идентификатор не найден
+  (компиляция исходного файла "TPolinom.cpp")
+  
+E:\Программы\Polinoms-by-List\TList_modify\TList.h(190,3): error C2065: pStop: необъявленный идентификатор
+  (компиляция исходного файла "TPolinom.cpp")
+  
+E:\Программы\Polinoms-by-List\TList_modify\TList.h(191,3): error C2065: pFirst: необъявленный идентификатор
+  (компиляция исходного файла "TPolinom.cpp")
+  
+E:\Программы\Polinoms-by-List\TList_modify\TList.h(192,3): error C2065: pPr: необъявленный идентификатор
+  (компиляция исходного файла "TPolinom.cpp")
+  
+E:\Программы\Polinoms-by-List\TList_modify\TList.h(193,3): error C2065: pCurr: необъявленный идентификатор
+  (компиляция исходного файла "TPolinom.cpp")
+  
+E:\Программы\Polinoms-by-List\TList_modify\TList.h(194,3): error C2065: len: необъявленный идентификатор
+  (компиляция исходного файла "TPolinom.cpp")
+  
+E:\Программы\Polinoms-by-List\TList_modify\TList.h(195,3): error C2065: pos: необъявленный идентификатор
+  (компиляция исходного файла "TPolinom.cpp")
+  
+E:\Программы\Polinoms-by-List\TList_modify\TList.h(206,5): error C3861: pFirst: идентификатор не найден
+  (компиляция исходного файла "TPolinom.cpp")
+  
+E:\Программы\Polinoms-by-List\TList_modify\TList.h(206,14): error C3861: pLast: идентификатор не найден
+  (компиляция исходного файла "TPolinom.cpp")
+  
+E:\Программы\Polinoms-by-List\TList_modify\TList.h(206,22): error C3861: pStop: идентификатор не найден
+  (компиляция исходного файла "TPolinom.cpp")
+  
+E:\Программы\Polinoms-by-List\TList_modify\TList.h(208,5): error C3861: pLast: идентификатор не найден
+  (компиляция исходного файла "TPolinom.cpp")
+  
+E:\Программы\Polinoms-by-List\TList_modify\TList.h(209,5): error C3861: pLast: идентификатор не найден
+  (компиляция исходного файла "TPolinom.cpp")
+  
+E:\Программы\Polinoms-by-List\TList_modify\TList.h(210,20): error C3861: pFirst: идентификатор не найден
+  (компиляция исходного файла "TPolinom.cpp")
+  
+E:\Программы\Polinoms-by-List\TList_modify\TList.h(214,3): error C3861: len: идентификатор не найден
+  (компиляция исходного файла "TPolinom.cpp")
+  
+E:\Программы\Polinoms-by-List\TList_modify\TList.h(215,3): error C3861: pos: идентификатор не найден
+  (компиляция исходного файла "TPolinom.cpp")
+  
+E:\Программы\Polinoms-by-List\TList_modify\TList.h(216,3): error C3861: pStop: идентификатор не найден
+  (компиляция исходного файла "TPolinom.cpp")
+  
+E:\Программы\Polinoms-by-List\TList_modify\TList.h(206,5): error C2065: pFirst: необъявленный идентификатор
+  (компиляция исходного файла "TPolinom.cpp")
+  
+E:\Программы\Polinoms-by-List\TList_modify\TList.h(206,14): error C2065: pLast: необъявленный идентификатор
+  (компиляция исходного файла "TPolinom.cpp")
+  
+E:\Программы\Polinoms-by-List\TList_modify\TList.h(206,22): error C2065: pStop: необъявленный идентификатор
+  (компиляция исходного файла "TPolinom.cpp")
+  
+E:\Программы\Polinoms-by-List\TList_modify\TList.h(208,5): error C2065: pLast: необъявленный идентификатор
+  (компиляция исходного файла "TPolinom.cpp")
+  
+E:\Программы\Polinoms-by-List\TList_modify\TList.h(209,5): error C2065: pLast: необъявленный идентификатор
+  (компиляция исходного файла "TPolinom.cpp")
+  
+E:\Программы\Polinoms-by-List\TList_modify\TList.h(210,20): error C2065: pFirst: необъявленный идентификатор
+  (компиляция исходного файла "TPolinom.cpp")
+  
+E:\Программы\Polinoms-by-List\TList_modify\TList.h(214,3): error C2065: len: необъявленный идентификатор
+  (компиляция исходного файла "TPolinom.cpp")
+  
+E:\Программы\Polinoms-by-List\TList_modify\TList.h(215,3): error C2065: pos: необъявленный идентификатор
+  (компиляция исходного файла "TPolinom.cpp")
+  
+E:\Программы\Polinoms-by-List\TList_modify\TList.h(216,3): error C2065: pStop: необъявленный идентификатор
+  (компиляция исходного файла "TPolinom.cpp")
+  
+E:\Программы\Polinoms-by-List\TList_modify\TList.h(226,18): error C3861: pFirst: идентификатор не найден
+  (компиляция исходного файла "TPolinom.cpp")
+  
+E:\Программы\Polinoms-by-List\TList_modify\TList.h(226,18): error C2065: pFirst: необъявленный идентификатор
+  (компиляция исходного файла "TPolinom.cpp")
+  
+E:\Программы\Polinoms-by-List\TList_modify\TList.h(231,18): error C3861: pFirst: идентификатор не найден
+  (компиляция исходного файла "TPolinom.cpp")
+  
+E:\Программы\Polinoms-by-List\TList_modify\TList.h(231,18): error C2065: pFirst: необъявленный идентификатор
+  (компиляция исходного файла "TPolinom.cpp")
+  
+E:\Программы\Polinoms-by-List\TList_modify\TList.h(236,3): error C3861: pLast: идентификатор не найден
+  (компиляция исходного файла "TPolinom.cpp")
+  
+E:\Программы\Polinoms-by-List\TList_modify\TList.h(236,3): error C2065: pLast: необъявленный идентификатор
+  (компиляция исходного файла "TPolinom.cpp")
+  
+E:\Программы\Polinoms-by-List\TList_modify\TList.h(241,3): error C3861: pLast: идентификатор не найден
+  (компиляция исходного файла "TPolinom.cpp")
+  
+E:\Программы\Polinoms-by-List\TList_modify\TList.h(241,3): error C2065: pLast: необъявленный идентификатор
+  (компиляция исходного файла "TPolinom.cpp")
+  
+E:\Программы\Polinoms-by-List\TList_modify\TPolinom.h(11,36): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
+  (компиляция исходного файла "TPolinom.cpp")
+  

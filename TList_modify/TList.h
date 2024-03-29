@@ -20,10 +20,9 @@ protected:
 	TNode<T>* pPr;			//indicator in previous item
 	TNode<T>* pCurr;		//indicator in current item
 	int pos, len;			//position and count of items in list
-
 public: 
 	TList() {						//designer
-		this->pFirst = nullptr; 
+		pFirst = nullptr; 
 		pStop = nullptr;
 		pLast = pStop;
 		pPr = pStop;
@@ -149,20 +148,38 @@ public:
 
 };
 
-
+/*
 struct TMonom {
 	double Coeff;				//the monome coefficient
 	int Index;					//index (powers)
 public:
+	TMonom() {
+		Coeff = 0;
+		Index = 1;
+	}
+
 	TMonom(int a, int b) {
 		Coeff = a;
 		Index = b;
 	}
-};
 
+	bool operator == (TMonom& TM) {
+		if (TM.Coeff == Coeff) {
+			if (TM.Index == Index)
+				return 1;
+		}
+		return 0;
+	}
+
+	bool operator != (TMonom& TM) {
+		if (*this == TM) return 0;
+		else return 1;
+	}
+};
+*/
 
 template <class T>
-class THeadList : public TList <T> {
+class THeadList :public TList<T> {
 protected:
 	TNode <T>* pHead;			// head (the zero element)
 public:
@@ -170,7 +187,10 @@ public:
 		pHead = new TNode<T>;
 		pHead = nullptr;
 		pHead->pNext = pHead;
-		pStop = pFirst = pPr = pCurr = pLast = pHead;
+		pStop = pHead;
+		pFirst = pHead;
+		pPr = pHead;
+		pCurr = pHead;
 		len = 0;
 		pos = -1;
 	}
@@ -206,8 +226,8 @@ public:
 		pHead->pNext = pFirst;
 	}
 
-	void DelFirst(T elem) {
-		TList<T>::DelFirst(elem);
+	void DelFirst() {
+		TList<T>::DelFirst();
 		pHead->pNext = pFirst;
 	}
 
@@ -216,8 +236,8 @@ public:
 		pLast->pNext = pHead;
 	}
 
-	void DelLast(T elem) {
-		TList<T>::DelLast(elem);
+	void DelLast() {
+		TList<T>::DelLast();
 		pLast->pNext = pHead;
 	}
 
@@ -225,7 +245,7 @@ public:
 		TList<T>::InsCurr(elem);
 	}
 
-	void DelCurr(T elem) {
-		TList<T>::DelCurr(elem);
+	void DelCurr() {
+		TList<T>::DelCurr();
 	}
 };

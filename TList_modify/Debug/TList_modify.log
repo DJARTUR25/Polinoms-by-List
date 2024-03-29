@@ -1,0 +1,11 @@
+﻿  main.cpp
+E:\Программы\Polinoms-by-List\TList_modify\TPolinom.h(11,36): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
+  (компиляция исходного файла "main.cpp")
+  
+  TList.cpp
+  TPolinom.cpp
+E:\Программы\Polinoms-by-List\TList_modify\TPolinom.h(11,36): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
+  (компиляция исходного файла "TPolinom.cpp")
+  
+  Создание кода...
+  TList_modify.vcxproj -> E:\Программы\Polinoms-by-List\Debug\TList_modify.exe
