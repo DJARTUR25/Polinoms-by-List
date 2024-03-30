@@ -1,2 +1,7 @@
 ﻿  test_list.cpp
+E:\Программы\Polinoms-by-List\gtest\gtest.h(50,1): warning C4005: _SILENCE_TR1_NAMESPACE_DEPRECATION_WARNING: изменение макроопределения
+  (компиляция исходного файла "test_list.cpp")
+  E:\Программы\Polinoms-by-List\gtest\gtest.h(50,1):
+  "_SILENCE_TR1_NAMESPACE_DEPRECATION_WARNING" ранее объявлен в командной строке
+  
   gtest.vcxproj -> E:\Программы\Polinoms-by-List\Debug\gtest.exe

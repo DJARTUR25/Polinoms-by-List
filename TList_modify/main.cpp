@@ -4,6 +4,9 @@
 using namespace std;
 
 void main() {
+	
+
+	cout << "Xuy\n";
 	/*cout << "		The polynomial test\n";
 
 	int c1[][2] = { {-1, 200}, {1,400} , {3,101}, {7, 210}, {10, 100} };

@@ -1,7 +1,9 @@
 #pragma once
 #include "TList.h"
+#include "TMonom.h"
+#include "THeadList.h"
 
-class TPolinom : public THeadList<TMonom>
+class TPolinom :public THeadList<TMonom>
 {
 public:
 	TPolinom(int monoms[][2] = NULL, int km = 0) {
@@ -28,34 +30,38 @@ public:
 	}
 
 	TPolinom& operator+ (TPolinom& TP) {
-		TMonom pm, qm, rm;
-		this->Reset();
-		while (1) {
-			pm = GetMonom();
-			qm = TP.GetMonom();
-			if (pm.Index > qm.Index) {
-				InsCurr(qm);
+		TPolinom res(*this);
+		res.Reset();
+		TP.Reset();
+		while (res.pCurr != res.pStop && TP.pCurr != TP.pStop)
+		{
+			if (res.GetCurr().GetIndex() < TP.GetCurr().GetIndex())
+			{
+				res.InsCurr(TP.GetCurr());
 				TP.GoNext();
 			}
-			else if (pm.Index > qm.Index) {
-				GoNext();
-				TP.GoNext();
-			}
-			else {
-				if (pm.Index == -1)
-					break;
-				pm.Coeff += qm.Coeff;
-				if (pm.Index != 0) {
-					GoNext();
-					TP.GoNext();
+			else
+				if (res.GetCurr().GetIndex() > TP.GetCurr().GetIndex())
+				{
+					res.GoNext();
 				}
-				else {
-					DelCurr();
-					TP.GoNext();
+				else
+				{
+					res.pCurr->val.SetCoeff(TP.pCurr->val.GetCoeff() + res.pCurr->val.GetCoeff());
+					if (res.pCurr->val.GetCoeff() != 0)
+					{
+						TP.GoNext();
+						res.GoNext();
+					}
+					else
+					{
+						res.DelCurr();
+						TP.GoNext();
+					}
 				}
-			}
+
 		}
-		return *this;
+		return res;
 	}
 
 	TPolinom& operator= (TPolinom& TP) {
@@ -68,15 +74,20 @@ public:
 	}
 
 	void AddMonom(TMonom _m) {
+		if (pCurr == nullptr)
+			InsFirst(_m);
 		pCurr = pFirst;
-		while (_m.Index < pCurr->val.Index) {
+		while (_m.GetIndex() < pCurr->val.GetIndex())
 			GoNext();
+		if (pCurr->val == _m)
+		{
+			if (pCurr->val.GetCoeff() + _m.GetCoeff() == 0)
+				DelCurr();
+			else
+				pCurr->val.SetCoeff(_m.GetCoeff());
 		}
-		if (pCurr->val == _m) {
-			if (_m.Coeff + pCurr->val.Coeff == 0) DelCurr();
-			else pCurr->val.Coeff = _m.Coeff + pCurr->val.Coeff;
-		}
-
+		else 
+			InsCurr(_m);
 	}
 
 	/*friend ostream& operator<< (ostream& os, TPolinom& TP) {

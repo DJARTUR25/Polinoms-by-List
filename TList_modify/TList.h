@@ -178,7 +178,7 @@ public:
 };
 */
 
-template <class T>
+/*template <class T>
 class THeadList :public TList<T> {
 protected:
 	TNode <T>* pHead;			// head (the zero element)
@@ -221,31 +221,31 @@ public:
 		delete pHead;
 	}
 
-	void InsFirst(T elem) {
+	void InsFirst(T elem) override {
 		TList<T>::InsFirst(elem);
 		pHead->pNext = pFirst;
 	}
 
-	void DelFirst() {
+	void DelFirst() override {
 		TList<T>::DelFirst();
 		pHead->pNext = pFirst;
 	}
 
-	void InsLast(T elem) {
+	void InsLast(T elem) override {
 		TList<T>::InsLast(elem);
 		pLast->pNext = pHead;
 	}
 
-	void DelLast() {
+	void DelLast() override{
 		TList<T>::DelLast();
 		pLast->pNext = pHead;
 	}
 
-	void InsCurr(T elem) {
+	void InsCurr(T elem) override{
 		TList<T>::InsCurr(elem);
 	}
 
-	void DelCurr() {
+	void DelCurr() override{
 		TList<T>::DelCurr();
 	}
-};
+}; */

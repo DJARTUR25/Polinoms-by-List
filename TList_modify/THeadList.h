@@ -1,12 +1,13 @@
-/*#pragma once
+#pragma once
 
 #include "TList.h"
 #include "TMonom.h"
 #include <iostream>
+
 using namespace std;
 
 template <class T>
-class THeadList :public TList<T> {
+class THeadList:public TList<T> {
 protected:
 	TNode <T>* pHead;			// head (the zero element)
 public:
@@ -76,5 +77,3 @@ public:
 		TList<T>::DelCurr();
 	}
 };
-
-*/
