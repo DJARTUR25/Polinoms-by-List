@@ -86,18 +86,40 @@ public:
 	void InsFirst(T _val) {				//insert before the first one
 		TNode<T>* tmp = new TNode<T>;
 		tmp->val = _val;
-		tmp->pNext = pFirst;
-		pFirst = tmp;
-		len++;
+		if (pFirst == nullptr) {
+			pFirst = tmp;
+			pFirst->pNext = pStop;
+			pLast = pFirst;
+			pCurr = pFirst;
+			len++; pos++;
+		}
+		else {
+			if (pFirst == pLast) {
+				tmp->pNext = pFirst;
+				pCurr = pFirst;
+				pLast = pCurr;
+				pFirst = tmp;
+				pPr = pFirst;
+				len++; pos++;
+			}
+			else {
+				tmp->pNext = pFirst;
+				pFirst = tmp;
+				len++; pos++;
+			}
+		}
 	}
 
 	void InsLast(T _val) {				//insert after the last one
-		TNode<T>* tmp = new TNode<T>;
-		tmp->val = _val;
-		tmp->pNext = pStop;
-		pLast->pNext = tmp;
-		pLast = tmp;
-		len++;
+		if (len == 0) InsFirst(_val);
+		else {
+			TNode<T>* tmp = new TNode<T>;
+			tmp->val = _val;
+			tmp->pNext = pStop;
+			pLast->pNext = tmp;
+			pLast = tmp;
+			len++;
+		}
 	}
 
 	void InsCurr(T _val) {				//insert before the cuurent one
@@ -134,7 +156,7 @@ public:
 	}
 
 	void SetPos(int _pos) {				//move pCurr to item with the received position
-		int pos = _pos;
+		pos = _pos;
 		pCurr = pFirst;
 		for (int i = 0; i < pos; i++) {
 			pPr = pCurr;
@@ -144,6 +166,29 @@ public:
 
 	T GetCurr() {						//get value of current element
 		return pCurr->val; 
+	}
+
+	void Print() {
+		if (pFirst == pStop) cout << "			List is EMPTY" << endl;
+		else {
+			cout << "			Your list: " << endl;
+			int p = pos;
+			if (pFirst == pLast)
+				cout << pFirst->val;
+			else {
+				Reset();
+				cout << pCurr->val;
+				GoNext();
+				while (!IsEnd()) {
+					cout << "  --->  " << pCurr->val;
+					GoNext();
+				}
+				SetPos(p);
+			}
+		}
+
+		cout << endl << endl;
+		cout << "		Length of the list = " << len << endl;
 	}
 
 };
