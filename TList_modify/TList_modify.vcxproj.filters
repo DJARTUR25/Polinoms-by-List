@@ -29,7 +29,7 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="TList.cpp">
+    <ClCompile Include="main_polinoms.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
     <ClCompile Include="main_list.cpp">
@@ -38,7 +38,7 @@
     <ClCompile Include="TPolinom.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="THeadList.cpp">
+    <ClCompile Include="main_headlist.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
     <ClCompile Include="TMonom.cpp">

@@ -134,8 +134,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main_list.cpp" />
-    <ClCompile Include="THeadList.cpp" />
-    <ClCompile Include="TList.cpp" />
+    <ClCompile Include="main_headlist.cpp" />
+    <ClCompile Include="main_polinoms.cpp" />
     <ClCompile Include="TMonom.cpp" />
     <ClCompile Include="TPolinom.cpp" />
   </ItemGroup>

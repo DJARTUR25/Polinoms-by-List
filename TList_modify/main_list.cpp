@@ -1,6 +1,6 @@
 #include "TList.h"
 
-using namespace std;
+using namespace std;										//comment this file if you want to test HEADLIST or POLINOMS
 
 void main() {
 	
@@ -15,7 +15,8 @@ void main() {
 	cout << "		4 : output the list;" << endl;
 	cout << "		5 : delete first element in list;" << endl;
 	cout << "		6 : delete current element in list;" << endl;
-	cout << "		9 : operations;" << endl;
+	cout << "		7 : delete last element in list;" << endl;
+	cout << "		9 : operations." << endl;
 	cout << endl << endl;
 	while (op != 0) {
 		cout << "		Choose the operation:	" << endl;
@@ -57,7 +58,6 @@ void main() {
 				L.InsLast(num);
 				cout << "		Entered!	" << endl;
 				break;
-				break;
 			}
 
 			case 4:
@@ -70,7 +70,7 @@ void main() {
 
 			case 5:
 			{
-				cout << "		Deleting first..." << endl;
+				cout << "		Deleting first one..." << endl;
 				L.DelFirst();
 				cout << "		Deleted!" << endl;
 				break;
@@ -78,8 +78,16 @@ void main() {
 
 			case 6:
 			{
-				cout << "		Deleting current..." << endl;
+				cout << "		Deleting current item..." << endl;
 				L.DelCurr();
+				cout << "		Deleted!" << endl;
+				break;
+			}
+
+			case 7:
+			{
+				cout << "		Deleting last one..." << endl;
+				L.DelLast();
 				cout << "		Deleted!" << endl;
 				break;
 			}
@@ -94,6 +102,7 @@ void main() {
 				cout << "		4 - output list;" << endl;	
 				cout << "		5 - delete first element;" << endl;
 				cout << "		6 - delete current element;" << endl;
+				cout << "		7 - delete last element;" << endl;
 				cout << "		9 - operations;" << endl;
 				break;
 			}

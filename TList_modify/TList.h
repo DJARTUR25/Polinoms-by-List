@@ -136,24 +136,83 @@ public:
 	}
 
 	void DelFirst() {					//deleting the first item
-		TNode<T>* tmp = pFirst;
-		pFirst = pFirst->pNext;
-		pPr = nullptr;
-		delete tmp;
-		len--;
+		if (len == 0)
+			throw ("Empty list!\n");
+		else {
+			TNode<T>* tmp = pFirst;
+			if (pCurr == pFirst) {
+				pCurr = pCurr->pNext;
+				pFirst = pFirst->pNext;
+				delete tmp;
+				len--;
+			}
+			else {
+				if (pFirst == pPr) {
+					pFirst = pFirst->pNext;
+					delete tmp;
+					pPr = nullptr;
+					len--; pos--;
+
+				}
+				else {
+					pFirst = pFirst->pNext;
+					delete tmp;
+					len--; pos--;
+				}
+			}
+		}
+	}
+
+	void DelLast() {					//deleting the last item
+		if (len == 0) 
+			throw ("Empty list!\n");
+		else {
+			if (pLast == pFirst)
+				DelFirst();
+			else {
+				if (pCurr == pLast)	{
+					TNode<T>* tmp = pCurr;
+					SetPos(pos - 1);
+					delete tmp;
+					pCurr->pNext = pStop;
+					pLast = pCurr;
+					len--;
+				}
+				else {
+					int posPcur = pos;
+					Reset();
+					while (pos != len - 1)
+						GoNext();
+					pCurr->pNext = pStop;
+					delete pLast;
+					pLast = pCurr;
+					SetPos(posPcur);
+					len--;
+				}
+			}
+		}
 	}
 
 	void DelCurr() {					//deleting the current item
-		if (pCurr != pStop) {
-			if (pCurr == pFirst)
-				DelFirst();
+		if (len == 0)
+			throw ("Empty list!\n");
+		if (pCurr == pFirst)
+			DelFirst();
+		else {
+			if (pCurr == pLast)
+				DelLast();
+			else
+				if (pCurr != pStop) {
+					TNode<T>* tmp = pCurr;
+					pCurr = pCurr->pNext;
+					pPr->pNext = pCurr;
+					delete tmp;
+					len--;
+				}
+
 		}
-		TNode<T>* tmp = pCurr;
-		pCurr = pCurr->pNext;
-		pPr->pNext = pCurr;
-		delete tmp;
-		len--;
 	}
+
 
 	void SetPos(int _pos) {				//move pCurr to item with the received position
 		pos = _pos;
@@ -192,105 +251,3 @@ public:
 	}
 
 };
-
-/*
-struct TMonom {
-	double Coeff;				//the monome coefficient
-	int Index;					//index (powers)
-public:
-	TMonom() {
-		Coeff = 0;
-		Index = 1;
-	}
-
-	TMonom(int a, int b) {
-		Coeff = a;
-		Index = b;
-	}
-
-	bool operator == (TMonom& TM) {
-		if (TM.Coeff == Coeff) {
-			if (TM.Index == Index)
-				return 1;
-		}
-		return 0;
-	}
-
-	bool operator != (TMonom& TM) {
-		if (*this == TM) return 0;
-		else return 1;
-	}
-};
-*/
-
-/*template <class T>
-class THeadList :public TList<T> {
-protected:
-	TNode <T>* pHead;			// head (the zero element)
-public:
-	THeadList() {				// designer
-		pHead = new TNode<T>;
-		pHead = nullptr;
-		pHead->pNext = pHead;
-		pStop = pHead;
-		pFirst = pHead;
-		pPr = pHead;
-		pCurr = pHead;
-		len = 0;
-		pos = -1;
-	}
-
-	THeadList(const THeadList<T>& HL) {		//designer by copy
-		pHead = nullptr;
-		TNode<T>* tmp = HL.pFirst;
-		TNode<T>* tmp2;
-		while (tmp != nullptr) {
-			tmp2 = new TNode<T>;
-			tmp2->val = tmp->val;
-			if (HL.pHead == HL.pHead)
-				pFirst = pLast = pStop = pHead = tmp2;
-			else {
-				pLast->pNext = tmp2;
-				pLast = tmp2;
-				pHead->pNext = pFirst;
-			}
-			tmp = tmp->pNext;
-		}
-		len = HL.len;
-		pos = -1;
-		pStop = pHead;
-	}
-
-	~THeadList() {
-		TList<T>::DelList();
-		delete pHead;
-	}
-
-	void InsFirst(T elem) override {
-		TList<T>::InsFirst(elem);
-		pHead->pNext = pFirst;
-	}
-
-	void DelFirst() override {
-		TList<T>::DelFirst();
-		pHead->pNext = pFirst;
-	}
-
-	void InsLast(T elem) override {
-		TList<T>::InsLast(elem);
-		pLast->pNext = pHead;
-	}
-
-	void DelLast() override{
-		TList<T>::DelLast();
-		pLast->pNext = pHead;
-	}
-
-	void InsCurr(T elem) override{
-		TList<T>::InsCurr(elem);
-	}
-
-	void DelCurr() override{
-		TList<T>::DelCurr();
-	}
-}; */
