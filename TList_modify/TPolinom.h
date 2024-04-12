@@ -2,6 +2,7 @@
 #include "TList.h"
 #include "TMonom.h"
 #include "THeadList.h"
+#include <vector>
 
 class TPolinom :public THeadList<TMonom>
 {
@@ -73,6 +74,49 @@ public:
 		return *this;
 	}
 
+	TPolinom& operator* (double _Const) {
+		TPolinom res(*this);
+		if (_Const == 0) res.DelList();
+		else {
+			res.Reset();
+			while (!res.IsEnd()) {
+				res.pCurr->val.SetCoeff(res.pCurr->val.GetCoeff() * (_Const));
+				res.GoNext();
+			}
+		}
+		return res;
+	}
+
+	TPolinom operator- (TPolinom& TP) {
+		return (*this + TP * (-1));
+	}
+
+	friend ostream& operator<< (ostream& os, TPolinom& TP)
+	{
+		TP.Reset();
+		int x, y, z;
+		TMonom TM = TP.GetCurr(); 
+		double idx = TM.GetIndex();
+		
+		x = TP.GetCurr().GetIndex() / 100;
+		y = TP.GetCurr().GetIndex() % 100 / 10;
+		z = TP.GetCurr().GetIndex() % 10;
+		os << TP.GetCurr().GetCoeff() << "(x^" << x << "y^" << y << "z^" << z << ")";
+		TP.GoNext();
+		while (!TP.IsEnd())
+		{
+			x = TP.GetCurr().GetIndex() / 100;
+			y = TP.GetCurr().GetIndex() % 100 / 10;
+			z = TP.GetCurr().GetIndex() % 10;
+			if (TP.GetCurr().GetCoeff() > 0)
+				os << "+";
+
+			os << TP.GetCurr().GetCoeff() << "(x^" << x << "y^" << y << "z^" << z << ")";
+			TP.GoNext();
+		}
+		return os;
+	}
+
 	void AddMonom(TMonom _m) {
 		if (pCurr == nullptr)
 			InsFirst(_m);
@@ -86,12 +130,33 @@ public:
 			else
 				pCurr->val.SetCoeff(_m.GetCoeff());
 		}
-		else 
+		else
 			InsCurr(_m);
 	}
 
-	/*friend ostream& operator<< (ostream& os, TPolinom& TP) {
+	void AddPolinom() {
+		cout << "			Enter your polynomial." << endl;
+		cout << "			First, enter the coefficient, and then the index of the monome you are entering." << endl;
+		cout << "			To complete the input, enter 0" << endl;
 
-	}*/
+		int Coeff, Index;
+		cin >> Coeff >> Index;
+		if (Index < 100) throw ("Wrong index!");
+		while (Index != 0) {
+			TMonom new_monom(Coeff, Index);
+			AddMonom(new_monom);
+			cin >> Coeff >> Index;
+			if ((Coeff == 0) || (Index == 0)) 
+				break;
+			if (Index < 100) throw ("Wrong index!");
+		}
+	}
+
+	void Print(vector<TPolinom> v, int CurrPos) {
+		cout << "			Your polynomial vector: " << endl;
+		for (int i = 0; i < CurrPos; i++) {
+			cout << "|" << i + 1 << "| " << v[i] << endl;
+		}
+	}
 };
 
