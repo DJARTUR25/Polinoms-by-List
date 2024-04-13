@@ -1,2 +1,4 @@
 ﻿  main.cpp
+E:\Программы\Polinoms-by-List\TList_modify\TPolinom.h(87): warning C4172: возвращение адреса локальной или временной переменной : res
+E:\Программы\Polinoms-by-List\TList_modify\TPolinom.h(65): warning C4172: возвращение адреса локальной или временной переменной : res
   TList_modify.vcxproj -> E:\Программы\Polinoms-by-List\Debug\TList_modify.exe

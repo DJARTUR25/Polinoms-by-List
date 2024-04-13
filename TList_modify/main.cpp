@@ -6,6 +6,14 @@
 
 using namespace std;
 
+
+void Print(vector<TPolinom> v, int CurrPos) {
+	cout << "			Your polynomial vector: " << endl;
+	for (int i = 0; i < CurrPos; i++) {
+		cout << "|" << i + 1 << "| " << v[i] << endl;
+	}
+}
+
 void test_tlist() {
 	cout << "				Testing of integer lists		" << endl;
 	cout << "				Press <e> to finish test		" << endl;
@@ -236,20 +244,79 @@ void test_theadlist() {
 void test_polynomial() {
 	cout << "				Testing of polynomials		" << endl;
 	cout << "				Press <e> to finish test		" << endl;
-	vector<TPolinom> vTP(30);
-	TPolinom TP;
+	vector<TPolinom> vTP(30);			//the polynomial vector
+	TPolinom TP;						//the polynomial
+	int current_last_vector = 0;
 	char op = '1';
 	
 	cout << endl << endl;
 	while (op != 'e') {
 		cout << "		Choose the operation:	" << endl;
-		cout << "		1 - ";
+		cout << "		1 - create the polynomial" << endl;
+		cout << "		2 - output all polynomials" << endl;
+		cout << "		3 - addition of polynomials" << endl;
+		cout << "		4 - subtraction of polynomials" << endl;
+		cout << "		5 - multiplication by a constant" << endl;
 		cin >> op;
 		switch (op) {
-			case 1:
+			case '1':
 			{
+				TP.AddPolinom();
+				vTP[current_last_vector] = TP;
+				current_last_vector++;
+				TP.DelList();
+				cout << "		You entered: ";
+				cout << TP;
+				cout << endl;
 				break;
 			}
+
+			case '2':
+			{
+				Print(vTP, 0);
+				break;
+			}
+
+			case '3':
+			{
+				cout << "		Select the folding polynomials" << endl;
+				int operand_1, operand_2;
+				cin >> operand_1;
+				cin >> operand_2;
+				vTP[current_last_vector] = vTP[operand_1 - 1] + vTP[operand_2];
+				current_last_vector++;
+				cout << endl << "			The result of addition is:" << endl;
+				cout << vTP[current_last_vector - 1] << endl;
+				break;
+			}
+
+			case '4':
+			{
+				int operand_1, operand_2;
+				cout << "		Select the reduced polynomial" << endl;
+				cin >> operand_1;
+				cout << endl << "		Select the subtractible polynomial" << endl;
+				cin >> operand_2;
+				vTP[current_last_vector] = vTP[operand_1 - 1] - vTP[operand_2];
+				current_last_vector++;
+				cout << endl << "			The result of subtraction is:" << endl;
+				cout << vTP[current_last_vector - 1] << endl;
+				break;
+			}
+
+			case '5':
+			{
+				int operand, constant;
+				cout << "		Choose a polynomial" << endl;
+				cin >> operand;
+				cout << endl << "		Enter the constant by which to multiply the polynomial" << endl;
+				cin >> constant;
+				vTP[current_last_vector] = vTP[operand] * constant;
+				current_last_vector++;
+				cout << endl << "		The result of multiplication by a constant" << vTP[current_last_vector - 1] << endl;
+				break;
+			}
+
 			default:
 			{
 				cout << "		Unknown command, try again." << endl;

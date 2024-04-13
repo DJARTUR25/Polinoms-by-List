@@ -13,12 +13,8 @@ protected:
 public:
 	THeadList() {				// designer
 		pHead = new TNode<T>;
-		pHead = nullptr;
 		pHead->pNext = pHead;
-		pStop = pHead;
-		pFirst = pHead;
-		pPr = pHead;
-		pCurr = pHead;
+		pStop = pLast = pFirst = pPr = pCurr = nullptr;
 		len = 0;
 		pos = -1;
 	}

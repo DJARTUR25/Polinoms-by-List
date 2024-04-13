@@ -151,12 +151,5 @@ public:
 			if (Index < 100) throw ("Wrong index!");
 		}
 	}
-
-	void Print(vector<TPolinom> v, int CurrPos) {
-		cout << "			Your polynomial vector: " << endl;
-		for (int i = 0; i < CurrPos; i++) {
-			cout << "|" << i + 1 << "| " << v[i] << endl;
-		}
-	}
 };
 
