@@ -8,10 +8,11 @@ using namespace std;
 
 void test_tlist() {
 	cout << "				Testing of integer lists		" << endl;
+	cout << "				Press <e> to finish test		" << endl;
 	TList<int> L;
-	int op = 1;
+	char op = '1';
 	cout << "			Choose the operation:	" << endl;
-	cout << "		0 : finish test;" << endl;
+	cout << "		e : finish test;" << endl;
 	cout << "		1 : insert element before current;" << endl;
 	cout << "		2 : insert element before first;" << endl;
 	cout << "		3 : insert element after last;" << endl;
@@ -19,21 +20,21 @@ void test_tlist() {
 	cout << "		5 : delete first element in list;" << endl;
 	cout << "		6 : delete current element in list;" << endl;
 	cout << "		7 : delete last element in list;" << endl;
-	cout << "		9 : operations." << endl;
+	cout << "		8 : operations." << endl;
 	cout << endl << endl;
-	while (op != 0) {
+	while (op != 'e') {
 		cout << "		Choose the operation:	" << endl;
 		cout << "	";
 		cin >> op;
 		switch (op) {
 
-		case 0:
+		case 'e':
 		{
 			cout << "			Testing finished		" << endl;
 			break;
 		}
 
-		case 1:
+		case '1':
 		{
 			cout << "		Enter the integer number what insert before current in list	" << endl << "	";
 			int num;
@@ -43,7 +44,7 @@ void test_tlist() {
 			break;
 		}
 
-		case 2:
+		case '2':
 		{
 			cout << "		Enter the integer number what insert before first in list	" << endl << "	";
 			int num;
@@ -53,7 +54,7 @@ void test_tlist() {
 			break;
 		}
 
-		case 3:
+		case '3':
 		{
 			cout << "		Enter the integer number what insert after last in list	" << endl << "	";
 			int num;
@@ -63,7 +64,7 @@ void test_tlist() {
 			break;
 		}
 
-		case 4:
+		case '4':
 		{
 			cout << "		Your list: " << endl << "	";
 			L.Print();
@@ -71,7 +72,7 @@ void test_tlist() {
 			break;
 		}
 
-		case 5:
+		case '5':
 		{
 			cout << "		Deleting first one..." << endl;
 			L.DelFirst();
@@ -79,7 +80,7 @@ void test_tlist() {
 			break;
 		}
 
-		case 6:
+		case '6':
 		{
 			cout << "		Deleting current item..." << endl;
 			L.DelCurr();
@@ -87,7 +88,7 @@ void test_tlist() {
 			break;
 		}
 
-		case 7:
+		case '7':
 		{
 			cout << "		Deleting last one..." << endl;
 			L.DelLast();
@@ -95,7 +96,7 @@ void test_tlist() {
 			break;
 		}
 
-		case 9:
+		case '8':
 		{
 			cout << "				Operations:		" << endl;
 			cout << "		0 - finish test;" << endl;
@@ -106,7 +107,7 @@ void test_tlist() {
 			cout << "		5 - delete first element;" << endl;
 			cout << "		6 - delete current element;" << endl;
 			cout << "		7 - delete last element;" << endl;
-			cout << "		9 - operations;" << endl;
+			cout << "		8 - operations;" << endl;
 			break;
 		}
 		default:
@@ -121,10 +122,11 @@ void test_tlist() {
 
 void test_theadlist() {
 	cout << "				Testing of integer headlists		" << endl;
+	cout << "				Press <e> to finish test		" << endl;
 	THeadList<int> HL;
-	int op = 1;
+	char op = '1';
 	cout << "			Choose the operation:	" << endl;
-	cout << "		0 : finish test;" << endl;
+	cout << "		e : finish test;" << endl;
 	cout << "		1 : insert element before current;" << endl;
 	cout << "		2 : insert element before first;" << endl;
 	cout << "		3 : insert element after last;" << endl;
@@ -132,7 +134,7 @@ void test_theadlist() {
 	cout << "		5 : delete first element in list;" << endl;
 	cout << "		6 : delete current element in list;" << endl;
 	cout << "		7 : delete last element in list;" << endl;
-	cout << "		9 : operations." << endl;
+	cout << "		8 : operations." << endl;
 	cout << endl << endl;
 	while (op != 0) {
 		cout << "		Choose the operation:	" << endl;
@@ -140,13 +142,13 @@ void test_theadlist() {
 		cin >> op;
 		switch (op) {
 
-		case 0:
+		case 'e':
 		{
 			cout << "			Testing finished		" << endl;
 			break;
 		}
 
-		case 1:
+		case '1':
 		{
 			cout << "		Enter the integer number what insert before current in list	" << endl << "	";
 			int num;
@@ -156,7 +158,7 @@ void test_theadlist() {
 			break;
 		}
 
-		case 2:
+		case '2':
 		{
 			cout << "		Enter the integer number what insert before first in list	" << endl << "	";
 			int num;
@@ -166,7 +168,7 @@ void test_theadlist() {
 			break;
 		}
 
-		case 3:
+		case '3':
 		{
 			cout << "		Enter the integer number what insert after last in list	" << endl << "	";
 			int num;
@@ -176,7 +178,7 @@ void test_theadlist() {
 			break;
 		}
 
-		case 4:
+		case '4':
 		{
 			cout << "		Your list: " << endl << "	";
 			HL.Print();
@@ -184,7 +186,7 @@ void test_theadlist() {
 			break;
 		}
 
-		case 5:
+		case '5':
 		{
 			cout << "		Deleting first one..." << endl;
 			HL.DelFirst();
@@ -192,7 +194,7 @@ void test_theadlist() {
 			break;
 		}
 
-		case 6:
+		case '6':
 		{
 			cout << "		Deleting current item..." << endl;
 			HL.DelCurr();
@@ -200,7 +202,7 @@ void test_theadlist() {
 			break;
 		}
 
-		case 7:
+		case '7':
 		{
 			cout << "		Deleting last one..." << endl;
 			HL.DelLast();
@@ -208,7 +210,7 @@ void test_theadlist() {
 			break;
 		}
 
-		case 9:
+		case '8':
 		{
 			cout << "				Operations:		" << endl;
 			cout << "		0 - finish test;" << endl;
@@ -219,7 +221,7 @@ void test_theadlist() {
 			cout << "		5 - delete first element;" << endl;
 			cout << "		6 - delete current element;" << endl;
 			cout << "		7 - delete last element;" << endl;
-			cout << "		9 - operations;" << endl;
+			cout << "		8 - operations;" << endl;
 			break;
 		}
 		default:
@@ -233,16 +235,26 @@ void test_theadlist() {
 
 void test_polynomial() {
 	cout << "				Testing of polynomials		" << endl;
-	vector<TPolinom> TP(30);
+	cout << "				Press <e> to finish test		" << endl;
+	vector<TPolinom> vTP(30);
 	TPolinom TP;
-	int op = 1;
+	char op = '1';
 	
 	cout << endl << endl;
-	while (op != 0) {
+	while (op != 'e') {
 		cout << "		Choose the operation:	" << endl;
-		cout << "	";
+		cout << "		1 - ";
 		cin >> op;
 		switch (op) {
+			case 1:
+			{
+				break;
+			}
+			default:
+			{
+				cout << "		Unknown command, try again." << endl;
+				break;
+			}
 		}
 	}
 	;
@@ -250,33 +262,33 @@ void test_polynomial() {
 
 void main() {
 	
-	int select = 1;
-	while (select != 0) {
+	char select = '1';
+	while (select != 'e') {
 
-		cout << endl << "				Select the structure to be tested" << endl << endl;
+		cout << endl << "				Select the structure to be tested. TO finish testing press <e>" << endl << endl;
 		cout << "		1: test list" << endl;
 		cout << "		2: test headlist" << endl;
 		cout << "		3: test polynomials" << endl;
-		cout << "		0: exit the programm" << endl << endl;
+		cout << "		e: exit the programm" << endl << endl;
 		cin >> select;
 
 		switch (select) {
-			case 1:
+			case '1':
 			{
 				test_tlist();
 				break;
 			}
-			case 2:
+			case '2':
 			{
 				test_theadlist();
 				break;
 			}
-			case 3:
+			case '3':
 			{
 				test_polynomial();
 				break;
 			}
-			case 0:
+			case 'e':
 			{
 				cout << "			Testing is completed." << endl;
 				break;

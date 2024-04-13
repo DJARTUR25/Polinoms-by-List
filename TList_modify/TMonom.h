@@ -9,7 +9,6 @@ class TMonom
 private:
 	double Coeff;
 	int Index;
-
 public:
 
 	TMonom() {
