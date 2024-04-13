@@ -47,7 +47,9 @@ public:
 
 	void InsFirst(T elem) {
 		TList<T>::InsFirst(elem);
+		pLast->pNext = pHead;
 		pHead->pNext = pFirst;
+		pStop = pHead;
 	}
 
 	void DelFirst() {
@@ -58,18 +60,49 @@ public:
 	void InsLast(T elem) {
 		TList<T>::InsLast(elem);
 		pLast->pNext = pHead;
+		pStop = pHead;
+		pHead->pNext = pFirst;
 	}
 
 	void DelLast() {
 		TList<T>::DelLast();
 		pLast->pNext = pHead;
+		pStop = pHead;
+		pHead->pNext = pFirst;
 	}
 
 	void InsCurr(T elem) {
 		TList<T>::InsCurr(elem);
+		pHead->pNext = pFirst;
 	}
 
 	void DelCurr() {
 		TList<T>::DelCurr();
+		if (pCurr == pFirst) pHead->pNext = pFirst;
+	}
+
+	void PrintHeadList() {
+		if (pFirst == pStop) cout << "		The headlist is EMPTY!\n";
+		else {
+			cout << "		Your headlist: " << endl;
+			int p = pos;
+			if (pFirst != pLast) {
+				Reset();
+				cout << pFirst->val;
+				GoNext();
+				while (!IsEnd()) {
+					cout << "  --->  " << pCurr->val;
+					GoNext();
+				}
+				SetPos(p);
+			}
+			else {
+				cout << pFirst->val;
+			}
+		}
+		cout << endl << endl;
+		cout << "		Lenhtg of your headlist is: " << len << endl;
+		if (pCurr != nullptr)
+			cout << "		Current item is: " << pCurr->val << " , its position is: " << pos << endl;
 	}
 };

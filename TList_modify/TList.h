@@ -88,7 +88,7 @@ public:
 		tmp->val = _val;
 		if (pFirst == nullptr) {
 			pFirst = tmp;
-			pFirst->pNext = pStop;
+			//pFirst->pNext = pLast;
 			pLast = pFirst;
 			pCurr = pFirst;
 			len++; pos++;
@@ -151,13 +151,14 @@ public:
 					pFirst = pFirst->pNext;
 					delete tmp;
 					pPr = nullptr;
-					len--; pos--;
-
+					len--;
+					pos--;
 				}
 				else {
 					pFirst = pFirst->pNext;
 					delete tmp;
-					len--; pos--;
+					len--;
+					pos--;
 				}
 			}
 		}
@@ -179,14 +180,14 @@ public:
 					len--;
 				}
 				else {
-					int posPcur = pos;
+					int p = pos;
 					Reset();
 					while (pos != len - 1)
 						GoNext();
 					pCurr->pNext = pStop;
 					delete pLast;
 					pLast = pCurr;
-					SetPos(posPcur);
+					SetPos(p);
 					len--;
 				}
 			}
@@ -228,25 +229,25 @@ public:
 	}
 
 	void Print() {
+		int p = pos;
 		if (pFirst == pStop) cout << "			List is EMPTY" << endl;
 		else {
 			cout << "			Your list: " << endl;
-			int p = pos;
 			if (pFirst == pLast)
 				cout << pFirst->val;
 			else {
 				Reset();
-				cout << pCurr->val;
+				cout << pFirst->val;
 				GoNext();
 				while (!IsEnd()) {
 					cout << "  --->  " << pCurr->val;
 					GoNext();
-				}
+				} 
 				SetPos(p);
 			}
 		}
-
 		cout << endl << endl;
+		if (pCurr != nullptr) cout << "		Current element: " << pCurr->val << "  , its position: " << p << endl;
 		cout << "		Length of the list = " << len << endl;
 	}
 

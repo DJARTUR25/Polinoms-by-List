@@ -145,9 +145,10 @@ public:
 		while (Index != 0) {
 			TMonom new_monom(Coeff, Index);
 			AddMonom(new_monom);
-			cin >> Coeff >> Index;
-			if ((Coeff == 0) || (Index == 0)) 
-				break;
+			cin >> Coeff; 
+			if (Coeff == 0) break;
+			cin >> Index;
+			if (Index == 0) break;
 			if (Index < 100) throw ("Wrong index!");
 		}
 	}
