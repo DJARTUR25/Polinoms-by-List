@@ -3,6 +3,19 @@
 #include "TMonom.h"
 #include "TPolinom.h"
 #include <iostream>
+#include <vector>
+
+void PrintVector(vector<TPolinom> v, int currentpos)
+{
+	cout << "Your polinom:\n\n";
+
+	for (int i = 0; i < currentpos; i++)
+	{
+
+		cout << "|" << i + 1 << "| " << v[i] << endl;
+	}
+	cout << endl;
+}
 
 using namespace std;
 
@@ -232,95 +245,55 @@ void test_theadlist() {
 
 void test_polynomial() {
 	cout << "				Testing of polynomials		" << endl;
-	vector<TPolinom> vTP(30);			//the polynomial vector
-	TPolinom TP;						//the polynomial
-	int current_last_vector = 0;
-	int op = 1;
-	
-	cout << endl << endl;
+	vector<TPolinom> vect(20);
+	TPolinom pol;
+	int op = 1, currentpos = 0;
+	int first, second;
 	while (op != 0) {
-		cout << "		Choose the operation:	" << endl;
-		cout << "		1 : create the polynomial" << endl;
-		cout << "		2 : output all polynomials" << endl;
-		cout << "		3 : addition of polynomials" << endl;
-		cout << "		4 : subtraction of polynomials" << endl;
-		cout << "		5 : multiplication by a constant" << endl;
-		cout << "		0 : finish test" << endl;
+		cout << "1-enter polinom\n2-addition\n3-substraction\n4-multiplication by const\n5-output\n";
 		cin >> op;
-		switch (op) {
-			case 1:
-			{
-				TP.AddPolinom();
-				vTP[current_last_vector] = TP;
-				current_last_vector++;
-				cout << "		You entered: ";
-				cout << TP;
-				cout << endl;
-				TP.DelList();
-				break;
-			}
+		switch (op)
+		{
+		case 1:
+			pol.EnterPolinom();
+			vect[currentpos] = pol;
+			currentpos++;
+			PrintVector(vect, currentpos);
+			pol.DelList();
+			break;
+		case 2:
+			cout << "Choose polinoms that u want to +\n";
+			cin >> first >> second;
 
-			case 2:
-			{
-				cout << "		Your polynomial vector: " << endl;
-				for (int i = 0; i < current_last_vector; i++)
-				{
-					cout << "	" << "|" << i + 1 << "|" << "	" << vTP[i] << endl;
-				}
-				break;
-			}
+			vect[currentpos] = vect[first - 1] + vect[second - 1];
+			currentpos++;
+			cout << "\nThe result: " << vect[currentpos - 1] << endl;
+			break;
+		case 3:
+			cout << "Choose polinoms that u want to -\n";
+			cin >> first >> second;
 
-			case 3:
-			{
-				cout << "		Select the folding polynomials" << endl;
-				int operand_1, operand_2;
-				cin >> operand_1;
-				cin >> operand_2;
-				vTP[current_last_vector] = vTP[operand_1 - 1] + vTP[operand_2];
-				current_last_vector++;
-				cout << endl << "			The result of addition is:" << endl;
-				cout << vTP[current_last_vector - 1] << endl;
-				break;
-			}
+			vect[currentpos] = vect[first - 1] - vect[second - 1];
+			currentpos++;
+			cout << "\nThe result: " << vect[currentpos - 1] << endl;
 
-			case 4:
-			{
-				int operand_1, operand_2;
-				cout << "		Select the reduced polynomial" << endl;
-				cin >> operand_1;
-				cout << endl << "		Select the subtractible polynomial" << endl;
-				cin >> operand_2;
-				vTP[current_last_vector] = vTP[operand_1 - 1] - vTP[operand_2];
-				current_last_vector++;
-				cout << endl << "			The result of subtraction is:" << endl;
-				cout << vTP[current_last_vector - 1] << endl;
-				break;
-			}
+			break;
+		case 4:
+			cout << "Choose polinoms and press number of const\n";
+			cin >> first >> second;
 
-			case 5:
-			{
-				int operand, constant;
-				cout << "		Choose a polynomial" << endl;
-				cin >> operand;
-				cout << endl << "		Enter the constant by which to multiply the polynomial" << endl;
-				cin >> constant;
-				vTP[current_last_vector] = vTP[operand] * constant;
-				current_last_vector++;
-				cout << endl << "		The result of multiplication by a constant" << vTP[current_last_vector - 1] << endl;
-				break;
-			}
-
-			case 0:
-			{
-				cout << "			Testing finished." << endl;
-				break;
-			}
-
-			default:
-			{
-				cout << "		Unknown command, try again." << endl;
-				break;
-			}
+			vect[currentpos] = vect[first - 1] * second;
+			currentpos++;
+			cout << "\nThe result: " << vect[currentpos - 1] << endl;
+			break;
+		case 5:
+			PrintVector(vect, currentpos);
+			break;
+		case 0:
+			cout << "Thanks for testing! " << endl;
+		default:
+			cout << "Unknown command" << endl;
+			break;
 		}
 	}
 }

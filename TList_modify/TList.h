@@ -24,16 +24,24 @@ public:
 	TList() {						//designer
 		pFirst = nullptr; 
 		pStop = nullptr;
-		pLast = pStop;
-		pPr = pStop;
-		pCurr = pFirst;
-		pos = -1;
+		pLast = nullptr;
+		pPr = nullptr;
+		pCurr = nullptr;
+		pos = 0;
 		len = 0;
 	}
 
 	TList(const TList<T>& l) {		//designer by copy
-		TNode<T>* tmp = l.pFirst, *curr;
-	//pFirst = pLast = nullptr;
+		pFirst = l.pFirst;
+		pLast = l.pLast;
+		pStop = l.pStop;
+		pCurr = nullptr;
+		pPr = nullptr;
+		pos = l.pos;
+		len = l.len;
+
+		/*TNode<T>* tmp = l.pFirst, * curr;
+		//pFirst = pLast = nullptr;
 		while (tmp != nullptr) {
 			curr = new TNode<T>;
 			curr->val = tmp->val;
@@ -50,6 +58,7 @@ public:
 		len = l.len;
 		pos = -1;
 		pStop = nullptr;
+		*/
 	}
 
 	void DelList() {					//deleting the list
@@ -66,7 +75,7 @@ public:
 	void Reset() {						//jump to first item
 		pCurr = pFirst;
 		pPr = pStop;
-		pos = 0;
+		pos = 1;
 	}
 
 	void GoNext() {						//jump to next item
@@ -214,13 +223,14 @@ public:
 		}
 	}
 
-
 	void SetPos(int _pos) {				//move pCurr to item with the received position
-		pos = _pos;
-		pCurr = pFirst;
-		for (int i = 0; i < pos; i++) {
-			pPr = pCurr;
-			pCurr = pCurr->pNext;
+		if ((_pos > len) || (_pos < 0))
+		{
+			throw ("Wrong pos!\n");
+		}
+		Reset();
+		while (pos != _pos) {
+			GoNext();
 		}
 	}
 

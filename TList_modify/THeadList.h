@@ -16,7 +16,7 @@ public:
 		pHead->pNext = pHead;
 		pStop = pLast = pFirst = pPr = pCurr = nullptr;
 		len = 0;
-		pos = -1;
+		pos = 0;
 	}
 
 	THeadList(const THeadList<T>& HL) {		//designer by copy
@@ -48,8 +48,8 @@ public:
 	void InsFirst(T elem) {
 		TList<T>::InsFirst(elem);
 		pLast->pNext = pHead;
-		pHead->pNext = pFirst;
 		pStop = pHead;
+		pHead->pNext = pFirst;
 	}
 
 	void DelFirst() {

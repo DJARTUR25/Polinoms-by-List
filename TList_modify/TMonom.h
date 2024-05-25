@@ -1,5 +1,4 @@
 #pragma once
-
 #include <iostream>
 using namespace std;
 
@@ -10,7 +9,6 @@ private:
 	double Coeff;
 	int Index;
 public:
-
 	TMonom() {
 		Coeff = 0;
 		Index = 0;
@@ -42,8 +40,8 @@ public:
 	}
 
 	bool operator== (TMonom monom) {
-		if ((Index == monom.Index) && (Coeff == monom.Coeff)) return 1;
-		else return 0;
+		if ((Index == monom.Index) && (Coeff == monom.Coeff)) return true;
+		else return false;
 	}
 
 };
