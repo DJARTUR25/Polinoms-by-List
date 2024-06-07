@@ -250,7 +250,8 @@ void test_polynomial() {
 	int op = 1, currentpos = 0;
 	int first, second;
 	while (op != 0) {
-		cout << "1-enter polinom\n2-addition\n3-substraction\n4-multiplication by const\n5-output\n";
+		cout << "	Choose the command\n" << endl;
+		cout << "	1-enter polinom\n	2-addition\n	3-substraction\n	4-multiplication by const\n		5-output\n";
 		cin >> op;
 		switch (op)
 		{
@@ -262,37 +263,37 @@ void test_polynomial() {
 			pol.DelList();
 			break;
 		case 2:
-			cout << "Choose polinoms that u want to +\n";
+			cout << "		Choose polinoms that u want to +" << endl;
 			cin >> first >> second;
 
 			vect[currentpos] = vect[first - 1] + vect[second - 1];
 			currentpos++;
-			cout << "\nThe result: " << vect[currentpos - 1] << endl;
+			cout << "\n		The result: " << vect[currentpos - 1] << endl;
 			break;
 		case 3:
-			cout << "Choose polinoms that u want to -\n";
+			cout << "		Choose polinoms that u want to -\n";
 			cin >> first >> second;
 
 			vect[currentpos] = vect[first - 1] - vect[second - 1];
 			currentpos++;
-			cout << "\nThe result: " << vect[currentpos - 1] << endl;
+			cout << "\n		The result: " << vect[currentpos - 1] << endl;
 
 			break;
 		case 4:
-			cout << "Choose polinoms and press number of const\n";
+			cout << "		Choose polinoms and press number of const\n";
 			cin >> first >> second;
 
 			vect[currentpos] = vect[first - 1] * second;
 			currentpos++;
-			cout << "\nThe result: " << vect[currentpos - 1] << endl;
+			cout << "\n		The result: " << vect[currentpos - 1] << endl;
 			break;
 		case 5:
 			PrintVector(vect, currentpos);
 			break;
 		case 0:
-			cout << "Thanks for testing! " << endl;
+			cout << "		Thanks for testing! " << endl;
 		default:
-			cout << "Unknown command" << endl;
+			cout << "		Unknown command" << endl;
 			break;
 		}
 	}
@@ -303,7 +304,7 @@ void main() {
 	int select = 1;
 	while (select != 0) {
 
-		cout << endl << "				Select the structure to be tested. TO finish testing press <e>" << endl << endl;
+		cout << endl << "				Select the structure to be tested. TO finish testing press <0>" << endl << endl;
 		cout << "		1: test list" << endl;
 		cout << "		2: test headlist" << endl;
 		cout << "		3: test polynomials" << endl;
